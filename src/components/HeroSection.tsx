@@ -19,7 +19,7 @@ const HeroSection = () => {
             Transforming Organ Donation with Blockchain
           </h1>
           <p className="text-lg md:text-xl text-teal-700 mb-10">
-            A secure, transparent, and fair platform connecting organ donors with recipients using
+            Pransetu: A secure, transparent, and fair platform connecting organ donors with recipients using
             cutting-edge AI matching and blockchain technology.
           </p>
 

@@ -1,4 +1,3 @@
-
 import React from "react";
 import HeroSection from "@/components/HeroSection";
 
@@ -9,7 +8,7 @@ const Index = () => {
       
       <section className="page-container py-16 bg-gradient-to-b from-white to-teal-50">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="section-title">How LifeChain Works</h2>
+          <h2 className="section-title">How Pransetu Works</h2>
           <p className="text-teal-600 mb-12">
             Our platform combines blockchain technology with AI to create a transparent, 
             secure, and fair organ donation system.
@@ -177,7 +176,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-lg font-bold text-teal-700 mb-4">LifeChain</h3>
+              <h3 className="text-lg font-bold text-teal-700 mb-4">Pransetu</h3>
               <p className="text-teal-600 text-sm">
                 Transforming organ donation with blockchain technology for a more transparent, 
                 secure, and fair system.
@@ -230,14 +229,14 @@ const Index = () => {
                     <rect width="20" height="16" x="2" y="4" rx="2" />
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                   </svg>
-                  contact@lifechain.io
+                  contact@pransetu.io
                 </li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-teal-200 mt-8 pt-8 text-center text-sm text-teal-600">
-            <p>&copy; {new Date().getFullYear()} LifeChain. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Pransetu. All rights reserved.</p>
           </div>
         </div>
       </footer>
