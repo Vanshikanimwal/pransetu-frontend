@@ -61,6 +61,7 @@ const Navbar = () => {
           <button
             className="md:hidden text-teal-700"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
