@@ -51,8 +51,8 @@ const HeroSection = () => {
               </div>
               
               <img 
-                src="/lovable-uploads/3827a093-4a37-403c-89ee-0c68bfaf5909.png" 
-                alt="Medical scan showing hand x-ray" 
+                src="/lovable-uploads/df5a9699-0b54-4f37-9074-37a6f6df5464.png" 
+                alt="Medical X-ray showing hand in OK gesture" 
                 className="rounded-lg w-full"
               />
             </div>
