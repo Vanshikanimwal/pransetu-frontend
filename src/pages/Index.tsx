@@ -1,5 +1,6 @@
 import React from "react";
 import HeroSection from "@/components/HeroSection";
+import DoctorContactSection from "@/components/DoctorContactSection";
 
 const Index = () => {
   return (
@@ -171,6 +172,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+      
+      <DoctorContactSection className="bg-gradient-to-b from-white to-teal-50" />
       
       <footer className="bg-teal-50 py-12 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
