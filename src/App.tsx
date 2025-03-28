@@ -9,7 +9,7 @@ import NotFound from "./pages/NotFound";
 import DonorRegistration from "./pages/DonorRegistration";
 import RecipientRegistration from "./pages/RecipientRegistration";
 import MatchResults from "./pages/MatchResults";
-import Layout from "./components/Layout";
+import Navbar from "./components/Navbar";
 
 const queryClient = new QueryClient();
 
@@ -19,15 +19,14 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/donor-registration" element={<DonorRegistration />} />
-            <Route path="/recipient-registration" element={<RecipientRegistration />} />
-            <Route path="/match-results" element={<MatchResults />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/donor-registration" element={<DonorRegistration />} />
+          <Route path="/recipient-registration" element={<RecipientRegistration />} />
+          <Route path="/match-results" element={<MatchResults />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

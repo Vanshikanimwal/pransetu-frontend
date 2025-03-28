@@ -96,20 +96,4 @@
   .label {
     @apply block text-sm font-medium text-teal-700 mb-1;
   }
-
-  /* Animation classes */
-  .animate-slide-in {
-    animation: slideIn 0.3s ease-out forwards;
-  }
-
-  @keyframes slideIn {
-    from {
-      transform: translateY(-10px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
 }
