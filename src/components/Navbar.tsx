@@ -1,8 +1,9 @@
 
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Wallet } from "lucide-react";
 import Logo from "./Logo";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,15 +24,14 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Register as Donor", path: "/donor-registration" },
-    { name: "Register as Recipient", path: "/recipient-registration" },
-    { name: "Match Results", path: "/match-results" },
+    { name: "Register", path: "/donor-registration" },
+    { name: "Dashboard", path: "/match-results" },
   ];
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/80 backdrop-blur-md shadow-md" : "bg-transparent"
+        isScrolled ? "bg-white/80 backdrop-blur-md shadow-md" : "bg-white"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,26 +41,33 @@ const Navbar = () => {
           </NavLink>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-10">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.name}
-                to={link.path}
-                className={({ isActive }) =>
-                  `text-sm font-medium transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-teal-500 after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100 ${
-                    isActive ? "text-teal-700 after:scale-x-100" : "text-teal-600"
-                  }`
-                }
-              >
-                {link.name}
-              </NavLink>
-            ))}
-          </nav>
+          <div className="hidden md:flex items-center space-x-10">
+            <nav className="flex items-center space-x-8">
+              {navLinks.map((link) => (
+                <NavLink
+                  key={link.name}
+                  to={link.path}
+                  className={({ isActive }) =>
+                    `text-base font-medium transition-colors duration-300 ${
+                      isActive ? "text-teal-600" : "text-gray-700 hover:text-teal-600"
+                    }`
+                  }
+                >
+                  {link.name}
+                </NavLink>
+              ))}
+            </nav>
+            <Button className="bg-teal-500 hover:bg-teal-600">
+              <Wallet className="mr-2 h-5 w-5" />
+              Connect Wallet
+            </Button>
+          </div>
 
           {/* Mobile Navigation Button */}
           <button
             className="md:hidden text-teal-700"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -85,6 +92,12 @@ const Navbar = () => {
                 {link.name}
               </NavLink>
             ))}
+            <div className="px-4 py-3">
+              <Button className="w-full bg-teal-500 hover:bg-teal-600">
+                <Wallet className="mr-2 h-5 w-5" />
+                Connect Wallet
+              </Button>
+            </div>
           </div>
         </div>
       )}
