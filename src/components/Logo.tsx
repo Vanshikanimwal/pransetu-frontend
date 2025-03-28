@@ -27,7 +27,7 @@ const Logo = ({ size = "md" }: LogoProps) => {
         width={logoSizes[size]} 
         height={logoSizes[size]} 
       />
-      <span className="font-bold bg-gradient-to-r from-teal-500 to-teal-700 bg-clip-text text-transparent">
+      <span className="font-bold text-white">
         Pransetu
       </span>
     </div>
