@@ -130,75 +130,75 @@ const DoctorCard: React.FC<{ doctor: DoctorProps }> = ({ doctor }) => {
                 {isOpen ? "Hide Details" : "Contact Details"}
               </Button>
             </CollapsibleTrigger>
+            
+            <CollapsibleContent className="mt-4 space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="glass-card p-3 rounded-lg flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center">
+                    <Phone className="w-4 h-4 text-teal-600" />
+                  </div>
+                  <div className="flex-grow">
+                    <p className="text-xs text-teal-600">Phone</p>
+                    <p className="text-sm font-medium text-teal-700">{doctor.phone}</p>
+                  </div>
+                  <Button size="sm" variant="ghost" onClick={() => handleContactClick('phone')}>
+                    Call
+                  </Button>
+                </div>
+                
+                <div className="glass-card p-3 rounded-lg flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center">
+                    <Mail className="w-4 h-4 text-teal-600" />
+                  </div>
+                  <div className="flex-grow">
+                    <p className="text-xs text-teal-600">Email</p>
+                    <p className="text-sm font-medium text-teal-700">{doctor.email}</p>
+                  </div>
+                  <Button size="sm" variant="ghost" onClick={() => handleContactClick('email')}>
+                    Email
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="glass-card p-3 rounded-lg flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center">
+                    <MapPin className="w-4 h-4 text-teal-600" />
+                  </div>
+                  <div className="flex-grow">
+                    <p className="text-xs text-teal-600">Location</p>
+                    <p className="text-sm font-medium text-teal-700">{doctor.location}</p>
+                  </div>
+                  <Button size="sm" variant="ghost" onClick={() => handleContactClick('location')}>
+                    Map
+                  </Button>
+                </div>
+                
+                <div className="glass-card p-3 rounded-lg flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center">
+                    <Calendar className="w-4 h-4 text-teal-600" />
+                  </div>
+                  <div className="flex-grow">
+                    <p className="text-xs text-teal-600">Availability</p>
+                    <p className="text-sm font-medium text-teal-700">{doctor.availability}</p>
+                  </div>
+                  <Button size="sm" variant="ghost" onClick={() => handleContactClick('appointment')}>
+                    Book
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="flex gap-2 mt-4">
+                <Button className="flex-1" variant="outline" onClick={() => handleContactClick('video')}>
+                  <MessageSquare className="mr-2 h-4 w-4" /> Video Consult
+                </Button>
+                <Button className="flex-1" onClick={() => handleContactClick('appointment')}>
+                  <Calendar className="mr-2 h-4 w-4" /> Book Appointment
+                </Button>
+              </div>
+            </CollapsibleContent>
           </Collapsible>
         </div>
-        
-        <CollapsibleContent className="mt-4 space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="glass-card p-3 rounded-lg flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center">
-                <Phone className="w-4 h-4 text-teal-600" />
-              </div>
-              <div className="flex-grow">
-                <p className="text-xs text-teal-600">Phone</p>
-                <p className="text-sm font-medium text-teal-700">{doctor.phone}</p>
-              </div>
-              <Button size="sm" variant="ghost" onClick={() => handleContactClick('phone')}>
-                Call
-              </Button>
-            </div>
-            
-            <div className="glass-card p-3 rounded-lg flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center">
-                <Mail className="w-4 h-4 text-teal-600" />
-              </div>
-              <div className="flex-grow">
-                <p className="text-xs text-teal-600">Email</p>
-                <p className="text-sm font-medium text-teal-700">{doctor.email}</p>
-              </div>
-              <Button size="sm" variant="ghost" onClick={() => handleContactClick('email')}>
-                Email
-              </Button>
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="glass-card p-3 rounded-lg flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center">
-                <MapPin className="w-4 h-4 text-teal-600" />
-              </div>
-              <div className="flex-grow">
-                <p className="text-xs text-teal-600">Location</p>
-                <p className="text-sm font-medium text-teal-700">{doctor.location}</p>
-              </div>
-              <Button size="sm" variant="ghost" onClick={() => handleContactClick('location')}>
-                Map
-              </Button>
-            </div>
-            
-            <div className="glass-card p-3 rounded-lg flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center">
-                <Calendar className="w-4 h-4 text-teal-600" />
-              </div>
-              <div className="flex-grow">
-                <p className="text-xs text-teal-600">Availability</p>
-                <p className="text-sm font-medium text-teal-700">{doctor.availability}</p>
-              </div>
-              <Button size="sm" variant="ghost" onClick={() => handleContactClick('appointment')}>
-                Book
-              </Button>
-            </div>
-          </div>
-          
-          <div className="flex gap-2 mt-4">
-            <Button className="flex-1" variant="outline" onClick={() => handleContactClick('video')}>
-              <MessageSquare className="mr-2 h-4 w-4" /> Video Consult
-            </Button>
-            <Button className="flex-1" onClick={() => handleContactClick('appointment')}>
-              <Calendar className="mr-2 h-4 w-4" /> Book Appointment
-            </Button>
-          </div>
-        </CollapsibleContent>
       </div>
     </div>
   );
